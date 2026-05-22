@@ -1,0 +1,9 @@
+[project]
+name = "mgya-watcher"
+version = "0.1.0"
+description = "Monitors mgya.org training pages for available seats and sends Telegram notifications"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "requests>=2.32",
+]

@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mgya-watcher
+  namespace: home-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mgya-watcher
+  template:
+    metadata:
+      labels:
+        app: mgya-watcher
+    spec:
+      containers:
+        - name: mgya-watcher
+          image: app
+          envFrom:
+            - configMapRef:
+                name: mgya-watcher-config
+            - secretRef:
+                name: telegram-secret
+          resources:
+            requests:
+              cpu: 10m
+              memory: 32Mi
+            limits:
+              cpu: 100m
+              memory: 64Mi

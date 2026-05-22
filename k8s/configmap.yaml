@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mgya-watcher-config
+  namespace: home-bot
+data:
+  POLL_INTERVAL_MINUTES: "5"
+  TARGET_URL: "https://www.mgya.org/oktatas/302"

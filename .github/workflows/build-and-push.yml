@@ -1,0 +1,16 @@
+name: Build, Push & Deploy
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'k8s/**'
+  pull_request:
+    branches: [main]
+
+jobs:
+  deploy:
+    uses: t-tibor/shared-workflows/.github/workflows/home-bot-shared-workflow.yml@main
+    permissions:
+      contents: write
+      packages: write

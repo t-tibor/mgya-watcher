@@ -10,7 +10,7 @@ on:
 
 jobs:
   deploy:
-    uses: t-tibor/shared-workflows/home-bot-shared-workflow.yml@main
+    uses: t-tibor/shared-workflows/.github/workflows/home-bot-shared-workflow.yml@main
     permissions:
       contents: write
       packages: write
